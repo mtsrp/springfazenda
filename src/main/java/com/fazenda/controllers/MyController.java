@@ -11,10 +11,9 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MyController {
 
-	private String[] quotes = {"Quote 1" , "Quote 2", "Quote 3"};
+	private String[] quotes = {"Quote1" , "Quote2", "Quote3"};
 	
 	@RequestMapping(value="/getQuote")
-	@ResponseBody
 	public String getRandomQuote(Model model) {
 		
 		int rand = new Random().nextInt(quotes.length);
@@ -23,5 +22,10 @@ public class MyController {
 		model.addAttribute("randomQuote", randomQuote);
 		
 		return "quote";
+	}
+	
+	@RequestMapping(value="/cadastrocli")
+	public String cadastroCliente(Model model) {
+		return "cadastro";
 	}
 }
