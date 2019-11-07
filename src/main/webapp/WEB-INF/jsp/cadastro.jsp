@@ -21,25 +21,24 @@
 <body>
 	<div class="container">
 		<h2>Crie sua conta</h2>
-		<form:form methhod="POST" action="/ecomerce/cadastrarcliente.html" modelAttribute="ClienteEntidade" class="form-horizontal" >
+		<form:form methhod="POST" commandName="cli" action="adicionacli.html" class="form-horizontal" >
+		
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="NomeC">Nome</label>
+				<label class="control-label col-sm-2" for="nome">Nome</label>
 				<div class="col-sm-3">
-					<input type="NomeC" required="true" class="form-control" id="NomeC"
-						name="NomeC" placeholder="Digite seu nome" maxlength="20">
+					<form:input path="nome" type="text" class="form-control" placeholder="Digite seu nome"/>
 				</div>
 			</div>
 
 
 			<div class="form-group">
-				<label class="control-label col-sm-2" for="SobC">Sobrenome</label>
+				<label class="control-label col-sm-2" for="sobrenome">Sobrenome</label>
 				<div class="col-sm-3">
-					<input type="SobC" required="true" class="form-control" id="SobC"
-						name="SobC" placeholder="Digite seu sobrenome" maxlength="20">
+					<form:input path="sobrenome" type="text" class="form-control" placeholder="Digite seu sobrenome"/>
 				</div>
 			</div>
 
-			<div class="form-group">
+			<!-- div class="form-group">
 				<label class="control-label col-sm-2" for="Email">Email</label>
 				<div class="col-sm-3">
 					<input type="Email" required="true" class="form-control" id="Email"
@@ -105,14 +104,14 @@
 					<input type="date" required="true" class="form-control" id="Data"
 						name="Data">
 				</div>
-			</div>
+			</div-->
 
-			<div class="form-group">
+			 <div class="form-group">
 				<div class="col-sm-offset-2 col-sm-10">
-					<button type="Submit" class="button button-default">Confirmar</button>
+					<form:button type="submit">Confirmar</form:button>
 				</div>
 
-			</div>
+			</div> 
 		</form:form>
 
 	</div>

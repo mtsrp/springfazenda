@@ -4,14 +4,20 @@ import java.util.Random;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.dao.ClienteDAO;
+import com.entidades.ClienteEntidade;
+import com.service.ClienteService;
 
 @Controller
 public class MyController {
 
 	private String[] quotes = {"Quote1" , "Quote2", "Quote3"};
+	private ClienteService clienteService;
+
 	
 	@RequestMapping(value="/getQuote")
 	public String getRandomQuote(Model model) {
@@ -24,8 +30,28 @@ public class MyController {
 		return "quote";
 	}
 	
-	@RequestMapping(value="/cadastrocli")
-	public String cadastroCliente(Model model) {
+	@RequestMapping(value="/cadastrocli",  method = RequestMethod.GET)
+	public String cadastroCliente(@ModelAttribute("cli") ClienteEntidade cli ) {
 		return "cadastro";
 	}
+	
+	@RequestMapping(value="/adicionacli")
+    public String adiciona(@ModelAttribute("cli") ClienteEntidade cli) {
+        ClienteDAO dao = new ClienteDAO();
+        dao.addCliente(cli);
+        return "cadastro";
+    }
+	
+	//For add and update person both
+		@RequestMapping(value= "/person/add", method = RequestMethod.POST)
+		public String addPerson(@ModelAttribute("clienteEntidade") ClienteEntidade c){
+			
+			
+				//new person, add it
+				this.clienteService.addPerson(c);
+			
+			
+			return "cadastro";
+			
+		}
 }
