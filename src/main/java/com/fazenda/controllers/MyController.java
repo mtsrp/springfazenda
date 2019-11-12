@@ -32,14 +32,14 @@ public class MyController {
 	
 	@RequestMapping(value="/cadastrocli",  method = RequestMethod.GET)
 	public String cadastroCliente(@ModelAttribute("cli") ClienteEntidade cli ) {
-		return "cadastro";
+		return "cadastrocli";
 	}
 	
 	@RequestMapping(value="/adicionacli")
     public String adiciona(@ModelAttribute("cli") ClienteEntidade cli) {
         ClienteDAO dao = new ClienteDAO();
         dao.addCliente(cli);
-        return "cadastro";
+        return "cadastrocli";
     }
 	
 	//For add and update person both
@@ -51,7 +51,7 @@ public class MyController {
 				this.clienteService.addPerson(c);
 			
 			
-			return "cadastro";
+			return "cadastrocli";
 			
 		}
 }
