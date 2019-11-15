@@ -71,7 +71,7 @@ input.invalid {
 </style>
 <body>
 
-	<form:form methhod="POST" commandName="cli" action="adicionacli.html"
+	<form:form method="POST" commandName="cli" action="cadastrarcli.html"
 		class="form-horizontal">
 
 		<h1>Crie sua conta</h1>

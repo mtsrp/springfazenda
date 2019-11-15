@@ -104,6 +104,10 @@ public class ClienteEntidade {
 		super();
 	}
     
+	@Override
+    public String toString() {
+        return "Customer [id=" + idCliente + ", firstName=" + nome + ", lastName=" + sobrenome + ", email=" + email + "]";
+    }
     
     
 }
