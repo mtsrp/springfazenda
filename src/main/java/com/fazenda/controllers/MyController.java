@@ -1,5 +1,6 @@
 package com.fazenda.controllers;
 
+import java.util.List;
 import java.util.Random;
 
 import org.springframework.stereotype.Controller;
@@ -15,20 +16,12 @@ import com.service.ClienteService;
 @Controller
 public class MyController {
 
-	private String[] quotes = { "Quote1", "Quote2", "Quote3" };
-	private ClienteService clienteService;
 
-	@RequestMapping(value = "/getQuote")
-	public String getRandomQuote(Model model) {
-
-		int rand = new Random().nextInt(quotes.length);
-		String randomQuote = quotes[rand];
-
-		model.addAttribute("randomQuote", randomQuote);
-
-		return "quote";
+	@RequestMapping(value = "")
+	public String telaindex() {
+		return "index";
 	}
-
+	
 	@RequestMapping(value = "/cadastrocli")
 	public String telaCadCli(@ModelAttribute("cli") ClienteEntidade cli) {
 		return "cliente/cadastrocli";
@@ -42,10 +35,11 @@ public class MyController {
 	}
 	
 	@RequestMapping(value = "/mostrarcli")
-	public String mostraClientes() {
-		ClienteDAO dao = new ClienteDAO();
-		dao.allClientes();
-		return "index";
+	public String mostraClientes(Model theModel) {
+		ClienteDAO serv = new ClienteDAO();
+        List < ClienteEntidade > clientes = serv.allClientes();
+        theModel.addAttribute("customers", clientes);
+        return "cliente/listaCliente";
 	}
 
 }

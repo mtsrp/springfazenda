@@ -115,18 +115,18 @@ input.invalid {
 			<label class="control-label col-sm-2" for="telefone">Digite
 				seu telefone</label>
 			<div class="col-sm-3">
-				<input type="Tel" required="true" class="form-control" id="telefone"
+				<form:input path="telefone" type="text" required="true" class="form-control" id="telefone"
 					name="telefone" placeholder="Digite seu telefone" minlength="9"
-					size="9" maxlength="9">
+					size="9" maxlength="9"/>
 			</div>
 		</div>
 
 		<div class="form-group">
 			<label class="control-label col-sm-2" for="Senha">Senha</label>
 			<div class="col-sm-3">
-				<input type="password" required="true" class="form-control"
-					id="Senha" name="Senha" placeholder="Digite sua senha"
-					minlength="8" size="10" maxlength="15">
+				<form:input path="senha" type="password" required="true" class="form-control"
+					id="senha" name="senha" placeholder="Digite sua senha"
+					minlength="8" size="10" maxlength="15"/>
 			</div>
 		</div>
 
@@ -145,9 +145,8 @@ input.invalid {
 		<div class="form-group">
 			<label class="control-label col-sm-2" for="genero"> Gênero</label>
 			<div class="col-sm-3">
-				<input type="radio" name="genero" value="male"> Masculino <input
-					type="radio" name="genero" value="female"> Feminino
-
+				<p><form:radiobutton path = "genero" value = "M" label = "Masculino" /></p>
+                <p><form:radiobutton path = "genero" value = "F" label = "Feminino" /></p>
 			</div>
 		</div>
 
