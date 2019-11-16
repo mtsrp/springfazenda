@@ -22,22 +22,22 @@ public class ClienteService {
 		this.clienteDAO.addCliente(c);
 	}
 
+	
 	/*
-	@Transactional
-	public void updatePerson(ClienteEntidade p) {
-		this.clienteDAO.updatePerson(p);
-	}
+	 * @Transactional public void updatePerson(ClienteEntidade p) {
+	 * this.clienteDAO.updatePerson(p); }
+	 */
 
 	
 	@Transactional
 	public List<ClienteEntidade> listPersons() {
-		return this.clienteDAO.listPersons();
+		return this.clienteDAO.allClientes();
 	}
 
 	
-	@Transactional
-	public ClienteEntidade getPersonById(int id) {
-		return this.clienteDAO.getPersonById(id);
-	}*/
+	/*
+	 * @Transactional public ClienteEntidade getPersonById(int id) { return
+	 * this.clienteDAO.getPersonById(id); }
+	 */
 
 }
