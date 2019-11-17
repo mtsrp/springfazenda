@@ -50,7 +50,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Validade">Validade</label>
 					<div class="col-sm-3">
-						<input type="date" required="true" class="form-control" id="Validade" name="Validade">
+						<form:input path="validade_prod" type="date" required="true" class="form-control" id="Validade" name="Validade"/>
 					</div>
 				</div>
 		
@@ -59,8 +59,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Imagem"> Defina uma imagem para o produto</label>
 					<div class="col-sm-5">
-						<input type="file" name="Imagem" required="true" id="Imagem" class="form-control">
-						<input type="hidden" name="MAX_SIZE_FILE" value="4194304">
+						<form:input path="img_prod" type="text" name="Imagem" required="true" id="img_prod" class="form-control"/>
 					</div>
 				</div>
 
