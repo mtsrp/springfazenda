@@ -26,11 +26,14 @@ public class ClienteEntidade {
     @GeneratedValue
     private int idCliente;
     private String nome;
-    private String sobrenome;
-	
-	private String email; private String celular; private String telefone;
-	private String senha; private String genero;
-	 @Temporal(TemporalType.DATE) private Calendar dtaNasc;
+    private String sobrenome;	
+	private String email; 
+	private String celular; 
+	private String telefone;
+	private String senha;
+	private String genero;
+	@Temporal(TemporalType.DATE) 
+	private Calendar dtaNasc;
 	 
 
     public int getIdCliente() {
@@ -94,9 +97,12 @@ public class ClienteEntidade {
 		this.idCliente = idCliente;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
-		
-		  this.email = email; this.celular = celular; this.telefone = telefone;
-		  this.senha = senha; this.genero = genero; this.dtaNasc = dtaNasc;
+		this.email = email; 
+		this.celular = celular; 
+		this.telefone = telefone;
+		this.senha = senha; 
+		this.genero = genero;
+		this.dtaNasc = dtaNasc;
 		 
 	}
 

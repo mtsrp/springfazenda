@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dao.ClienteDAO;
 import com.entidades.ClienteEntidade;
+import com.entidades.ProdutoEntidade;
 import com.service.ClienteService;
 
 @Controller
@@ -41,5 +42,10 @@ public class MyController {
         theModel.addAttribute("customers", clientes);
         return "cliente/listaCliente";
 	}
-
+    
+	@RequestMapping(value = "/cadastroprod")
+	public String cadastroProd(@ModelAttribute("pro") ProdutoEntidade pro ) {
+		
+		return "produto/cadastropro";
+	}
 }

@@ -1,5 +1,10 @@
 Manifest-Version: 1.0
+<<<<<<< HEAD
 Built-By: mathe
 Build-Jdk: 1.8.0_131
+=======
+Built-By: chari
+Build-Jdk: 1.8.0_181
+>>>>>>> 87b433f220b1de8150ff6dcc5c5290efe6659d61
 Created-By: Maven Integration for Eclipse
 
