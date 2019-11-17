@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dao.ClienteDAO;
+import com.dao.ProdutoDAO;
 import com.entidades.ClienteEntidade;
 import com.entidades.ProdutoEntidade;
 import com.service.ClienteService;
@@ -47,5 +48,20 @@ public class MyController {
 	public String cadastroProd(@ModelAttribute("pro") ProdutoEntidade pro ) {
 		
 		return "produto/cadastropro";
+	}
+	
+	@RequestMapping(value = "/cadastrarprod")
+	public String cadastrarProd(@ModelAttribute("pro") ProdutoEntidade pro) {
+		ProdutoDAO prod = new ProdutoDAO();
+		prod.addProduto(pro);
+		return "index";
+	}
+	
+	@RequestMapping(value = "/mostrarprod")
+	public String mostraProdutos(Model theModel) {
+		ProdutoDAO serv = new ProdutoDAO();
+        List < ProdutoEntidade > produtos = serv.allProdutos();
+        theModel.addAttribute("produtos", produtos);
+        return "produto/listaProdutos";
 	}
 }

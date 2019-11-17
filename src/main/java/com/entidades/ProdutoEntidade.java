@@ -18,7 +18,7 @@ import javax.persistence.TemporalType;
  * @author Matheus
  */
 @Entity
-@Table(name = "Produto")
+@Table(name = "produto")
 public class ProdutoEntidade {
     @Id
     @GeneratedValue
