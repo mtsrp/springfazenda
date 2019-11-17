@@ -17,7 +17,7 @@ import com.service.ClienteService;
 public class MyController {
 
 
-	@RequestMapping(value = "")
+	@RequestMapping(value = "/home")
 	public String telaindex() {
 		return "index";
 	}
