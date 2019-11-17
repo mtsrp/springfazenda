@@ -24,7 +24,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Cep">CEP</label>
 					<div class="col-sm-3">
-						<input type="text" required="true" class="form-control" id="Cep" name="Cep" placeholder="Digite seu CEP" minlength="8" size="8" maxlength="8">
+						<form:input path="cep_cli" type="text" required="true" class="form-control" id="Cep" name="Cep" placeholder="Digite seu CEP" minlength="8" size="8" maxlength="8"/>
 					</div>
 				</div>
 			</form>
@@ -33,11 +33,11 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Rua">Rua</label>
 					<div class="col-sm-2">
-						<input type="text" required="true" class="form-control" id="Rua" name="Rua" placeholder="Digite o nome da rua" maxlength="70">
+						<form:input path="rua_cli" type="text" required="true" class="form-control" id="Rua" name="Rua" placeholder="Digite o nome da rua" maxlength="70"/>
 					</div>
 
 					<div class="col-sm-1">
-						<input type="text" required="true" class="form-control" id="Numero" name="Numero" placeholder="Nº" minlength="6" size="6" maxlength="6">
+						<form:input path="num_end_cli" type="text" required="true" class="form-control" id="Numero" name="Numero" placeholder="Nº" minlength="6" size="6" maxlength="6"/>
 					</div>
 				</div>
 			</form>
@@ -46,7 +46,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Complemento">Complemento</label>
 					<div class="col-sm-3">
-						<input type="text" required="true" class="form-control" id="Complemento" name="Complemento" placeholder="Digite um complemento" maxlength="25">
+						<form:input path="comp_cli" type="text" required="true" class="form-control" id="Complemento" name="Complemento" placeholder="Digite um complemento" maxlength="25"/>
 					</div>
 				</div>
 			</form>
@@ -55,7 +55,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Cidade">Cidade</label>
 					<div class="col-sm-3">
-						<input type="text" required="true" class="form-control" id="Cidade" name="Cidade" placeholder="Digite sua cidade" maxlength="70">
+						<form:input path="cid_cli" type="text" required="true" class="form-control" id="Cidade" name="Cidade" placeholder="Digite sua cidade" maxlength="70"/>
 					</div>
 				</div>
 			</form>
@@ -104,7 +104,7 @@
 				<div class="form-group">
 					<label class="control-label col-sm-2" for="Bairro">Bairro</label>
 					<div class="col-sm-3">
-						<input type="text" required="true" class="form-control" id="Bairro" name="Bairro" placeholder="Digite seu bairro" maxlength="40">
+						<form:input path="bairro_cli" type="text" required="true" class="form-control" id="Bairro" name="Bairro" placeholder="Digite seu bairro" maxlength="40"/>
 					</div>
 				</div>
 			</form>

@@ -45,7 +45,6 @@ public class MyController {
     
 	@RequestMapping(value = "/cadastroprod")
 	public String cadastroProd(@ModelAttribute("pro") ProdutoEntidade pro ) {
-		
-		return "produto/cadastropro";
+	return "produto/cadastropro";
 	}
 }
