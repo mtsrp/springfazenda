@@ -10,5 +10,10 @@
 <a type="button" href="cadastrocli.html" onclick="">Cadastro Cliente</a>
 
 <a type="button" href="mostrarcli.html" onclick="">Mostra Clientes</a>
+
+<a type="button" href="cadastroEndereco.html" onclick="">Cadastro Endereco</a>
+
+<a type="button" href="mostrarcli.html" onclick="">Mostra Clientes</a>
+
 </body>
 </html>

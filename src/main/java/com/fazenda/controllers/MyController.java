@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.dao.ClienteDAO;
+import com.dao.EnderecoDAO;
 import com.dao.ProdutoDAO;
 import com.entidades.ClienteEntidade;
+import com.entidades.EnderecoCliEntidade;
 import com.entidades.ProdutoEntidade;
 import com.service.ClienteService;
 
@@ -62,5 +64,17 @@ public class MyController {
         List < ProdutoEntidade > produtos = serv.allProdutos();
         theModel.addAttribute("produtos", produtos);
         return "produto/listaProdutos";
+	}
+	
+	@RequestMapping(value = "/cadastroEndereco")
+	public String telaCadEndereco(@ModelAttribute("end") EnderecoCliEntidade end) {
+        return "cliente/enderecocli";
+	}
+	
+	@RequestMapping(value = "/cadastrarEndereco")
+	public String CadastroEndereco(@ModelAttribute("end") EnderecoCliEntidade end) {
+		EnderecoDAO prod = new EnderecoDAO();
+		prod.addEndereco(end);
+        return "index";
 	}
 }

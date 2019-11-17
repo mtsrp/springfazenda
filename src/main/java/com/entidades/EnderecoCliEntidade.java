@@ -5,6 +5,8 @@ import java.util.Calendar;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,6 +23,9 @@ public class EnderecoCliEntidade {
 	private String cidade;
 	private String estado;
 	
+	@ManyToOne
+	@JoinColumn(name = "idCliente")
+	private ClienteEntidade cli;
 
 	public int getIdEndereco() {
 		return idEndereco;
